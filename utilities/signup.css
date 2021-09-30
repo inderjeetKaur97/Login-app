@@ -1,0 +1,127 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* ----------------------------start : (signup link) signup form popup styling---------- */
+
+.container-signup{
+    border: 2px solid rgb(255, 255, 255);
+    height: 95vh;
+    width: 30vw;
+    position: absolute;
+    left: 34vw;
+    top: 20px;
+    box-shadow: 0px 0px 16px 0px rgb(43, 42, 42) ;
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    /* opacity: 0; */
+    /* transform: scale(1.25); */
+    /* transition: transform 0.8s ease-in-out 0s,
+                opacity 1s ease-in-out 0s,
+                top 0s ease-in-out 200ms; */
+
+
+}
+.container-signup-active{
+    opacity: 1;
+    transform: scale(1);
+    top: 2vh;
+}
+.container-signup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    /* border: 2px solid pink; */
+    border-radius: 50%;
+    width: 6%;
+    height: 4%;
+    text-align: center;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transform: scale(0.8);
+}
+.container-signup .close-btn:hover{
+    background-color: #fc5f61;
+    transform: scale(1);
+}
+.container-signup h2{
+    /* border: 2px solid yellow; */
+    margin: 20px;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+.container-signup h4{
+    /* border: 2px solid yellow; */
+    margin: 5px 0px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: grey;
+    font-weight: lighter;
+    font-size: 85%;
+}
+.container-signup .signup-form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 40px;
+    color: rgb(0, 0, 0);
+
+    /* padding: 30px; */
+}
+
+.container-signup .signup-form-box .input-box{
+    font-size: 87%;
+    padding: 10px;
+    margin: 5px 0px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    outline-color: rgb(168, 164, 164);
+}
+.container-signup .signup-form-box .gender-box{
+    display: inherit;
+    margin-bottom: 10px;
+}
+.container-signup .signup-form-box .gender-box .g-radio{
+    margin:0px 6px;
+}
+.btn-signup{
+    width: 30%;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 5px;
+    background-color: #fc5f61;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 115%;
+    cursor: pointer;
+}
+.btn-signup:hover{
+    transform: scale(1.1);
+}
+/*---------------------------- End :  signup form popup styling -------------------------------------------*/
+
+/*---------------------------- Start : signup pop up errors -------------------------------------------*/
+
+
+
+.signuperror{
+    font-size: 0.7rem;
+    margin-left: 6%;
+}
+
+/*---------------------------- End : signup pop up errors -------------------------------------------*/

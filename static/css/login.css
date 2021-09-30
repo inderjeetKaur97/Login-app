@@ -1,0 +1,290 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*---------------------------- Start: Login page styling -------------------------------------------*/
+
+.container{
+    background: url(/img/bg/home_bg.jpg.jpg) no-repeat center center/cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -2;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #9742a8    ;
+    left: 0;
+    top: 0;
+    opacity: 0.85;
+}
+.login-form-box{
+    /* border: 2px solid white; */
+    width: 40%;
+    margin: auto;
+    position: relative;
+    top: 15%;
+    text-align: center;
+    padding: 23px;
+
+}
+.login-form-box img{
+    border-radius: 50%;
+    height: 15vh;
+    border: 2px solid rgb(145, 145, 145);
+    /* width: 20vh; */
+}
+.login-form-box img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    border: 2px solid #fc5f61;
+}
+.login-form-box h2{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  font-weight: 400;
+
+}
+.login-form-box form{
+    /* border: 2px solid yellow; */
+    padding: 10px;
+    margin: 10px 0px;
+}
+.input-row{
+    background-color: white;
+    width: 60%;
+    margin: 15px auto;
+    border-radius: 20px;
+    
+}
+.input-row input{
+    width: 80%;
+    margin: 0px 10px;
+    font-size: 15px;
+    padding: 8px 10px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
+}
+.input-row i{
+    color: rgb(97, 96, 96);   
+}
+.btn{
+    background-color: rgb(61, 60, 60);
+    font-size: 15px;
+    padding: 8px 10px;
+    margin: 0px auto;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 550;
+
+}
+.btn:hover{
+    background-color: #fc5f61    ;
+    color: black;
+    font-weight: 700;
+}
+.signup-links{
+    margin-top: 12px;
+    word-spacing: 3px;
+}
+.signup-links a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.signup-links a:hover{
+   text-decoration: underline;
+}
+
+/*---------------------------- End :  Login page styling -------------------------------------------*/
+
+
+
+
+/* ----------------------------start : (signup link) signup form popup styling---------- */
+
+.container-signup , .container-fpass{
+    border: 2px solid rgb(255, 255, 255);
+    height: 95vh;
+    width: 30vw;
+    position: absolute;
+    left: 34vw;
+    top: -200vh;
+    box-shadow: 0px 0px 16px 0px rgb(43, 42, 42) ;
+    font-family: 'Montserrat', sans-serif;
+    background-color: whitesmoke;
+    border-radius: 12px;
+    opacity: 0;
+    transform: scale(1.25);
+    transition: transform 0.8s ease-in-out 0s,
+                opacity 1s ease-in-out 0s,
+                top 0s ease-in-out 200ms;
+
+
+}
+.container-signup-active{
+    opacity: 1;
+    transform: scale(1);
+    top: 2vh;
+}
+
+
+/* forgot password container and on active state */
+.container-fpass{
+    height: 35vh;
+    top: -100vh;
+    transition: transform 0.8s ease-in-out 0s,
+    opacity 1s ease-in-out 0s,
+    top 0s ease-in-out 200ms;
+    
+}
+.container-fpass-active{
+    opacity: 1;
+    transform: scale(1);
+    top: 27vh;
+}
+.close-btn,.close-btn-fpass {
+    position: absolute;
+    top: 2%;
+    right: 7%;
+    /* border: 2px solid pink; */
+    border-radius: 50%;
+    width: 2vw;
+    height: 4vh;
+    text-align: center;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transform: scale(0.8);
+}
+.close-btn:hover,.close-btn-fpass:hover{
+    background-color: #fc5f61;
+    transform: scale(1);
+}
+.container-signup h2,.container-fpass h2{
+    /* border: 2px solid yellow; */
+    margin: 20px;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+.container-fpass h2{
+    font-size: 1rem;
+    
+
+}
+.container-signup h4,.container-fpass h4{
+    /* border: 2px solid yellow; */
+    margin: 5px 0px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: grey;
+    font-weight: lighter;
+    font-size: 85%;
+}
+.container-fpass h4{
+    font-size: 75%;
+    margin-bottom: 10px;
+
+
+}
+.container-signup .signup-form-box ,.container-fpass .fpassForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 40px;
+    color: rgb(0, 0, 0);
+
+    /* padding: 30px; */
+}
+
+.container-signup .signup-form-box .input-box ,.container-fpass .input-box  {
+    font-size: 87%;
+    padding: 10px;
+    margin: 5px 0px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    outline-color: rgb(168, 164, 164);
+}
+.container-fpass .input-box{
+    font-size: 77%;
+
+}
+.container-signup .signup-form-box .gender-box{
+    display: inherit;
+    margin-bottom: 10px;
+}
+.container-signup .signup-form-box .gender-box .g-radio{
+    margin:0px 6px;
+}
+.btn-signup{
+    width: 30%;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 5px;
+    background-color: #fc5f61;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 115%;
+    cursor: pointer;
+}
+.btn-signup:hover{
+    transform: scale(1.1);
+}
+.btn-fpass{
+    width: 25%;
+    font-size: 90%;
+    /* font-weight: bold; */
+    margin: 4px 3px;
+
+
+}
+/*---------------------------- End :  signup form popup styling -------------------------------------------*/
+
+
+/*---------------------------- Start : signup pop up errors -------------------------------------------*/
+
+
+.signuperror{
+    font-size: 0.7rem;
+    margin-left: 6%;
+    color: red;
+    font-weight: bold;
+}
+
+.signuperror i{
+    color: green;
+    font-size: 1rem;
+    display: none;
+    /* visibility: hidden; */
+}
+
+
+
+
+/*---------------------------- End : signup pop up errors -------------------------------------------*/
+

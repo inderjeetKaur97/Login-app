@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://kit.fontawesome.com/bd4ab4d7ef.js" crossorigin="anonymous"></script>
+
+    <title>Inderjeet Kaur- Portfolio</title>
+</head>
+
+<body>
+    <!-- login page  -->
+
+    <div class="container">
+        <div class="login-form-box">
+            <img class="profile-pic" src="/img/profile-photo.jpg" alt="Inderjeet profile photo">
+            <!-- <p class="typewriter"></p> -->
+            <h2>Inderjeet Kaur</h2>
+            <form action="/login" method="POST">
+                <div class="input-row">
+                    <i class="fa fa-user"></i>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-row">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button class="btn input-row" type="submit">Submit</button>
+                <div class="signup-links">
+                    <span> <a class="show-signup" href="#"> Sign-up </a>|</span>
+                    <span> <a class="show-fpass" href="#"> Forgot password? </a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup-form pop-up -->
+
+    <div class="container-signup">
+        <div class="close-btn">&times;</div>
+        <h2>Sign Up</h2>
+        <h4>Want to signup ? Fill out the form</h4>
+        <hr>
+
+        <form action="/signup" class="signup-form-box" method="POST" name="signupForm" onsubmit="return validateForm()"
+            required>
+            <div>
+                <span>First Name</span>
+                <span class="signuperror" id="eFirstName"><i class="fa fa-check"></i></span>
+            </div>
+            <input type="text" name="firstName" class="input-box" placeholder="First Name*">
+
+            <div>
+                <span>Last Name</span>
+                <span class="signuperror" id="eLastName"><i class="fa fa-check"></i></span>
+            </div>
+            <input type="text" name="lastName" class="input-box" placeholder="Last Name*" required>
+
+            <div class="gender-box">
+                <input type="radio" name="gender" class="g-radio" value="male" required>Male
+                <input type="radio" name="gender" class="g-radio" value="female" required>Female
+                <span class="signuperror" id="e-gender"><i class="fa fa-check"></i></span>
+            </div>
+
+            <div>
+                <span>Email</span>
+                <span class="signuperror" id="eSignEmail"><i class="fa fa-check"></i></span>
+            </div>
+            <input type="email" name="email" class="input-box" placeholder="Email*" required>
+
+            <div>
+                <span>Password</span>
+                <span class="signuperror" id="eSignPass"><i class="fa fa-check"></i></span>
+            </div>
+            <input type="password" name="password" class="input-box" placeholder="Password*" required>
+
+            <div>
+                <span>Confirm Password</span>
+                <span class="signuperror" id="eCSignPass"><i class="fa fa-check"></i></span>
+            </div>
+            <input type="password" name="confirmPassword" class="input-box" placeholder="Confirm Password*" required>
+
+            <button type="submit" class="btn-signup">Sign up</button>
+        </form>
+    </div>
+
+    <!-- Forgot password-form pop-up -->
+
+    <div class="container-fpass">
+        <div class="close-btn-fpass">&times;</div>
+        <h2>Forgot Password</h2>
+        <h4>Enter your email :</h4>
+        <hr>
+
+        <form action="/fpass" class="fpassForm" method="POST" name="fpassForm" required>
+            <div>
+                <span>Email</span>
+            </div>
+            <input type="email" name="email" class="input-box" placeholder="Email*">
+            <button type="submit" class="btn-signup btn-fpass">Submit</button>
+        </form>
+        <script src="/js/login.js"></script>
+    </div>
+</body>
+
+</html>

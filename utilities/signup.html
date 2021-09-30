@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inderjeet Kaur | Sign-up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <!-- Signup-form pop-up -->
+
+    <div class="container-signup">
+        <div class="close-btn">&times;</div>
+        <h2>Sign Up</h2>
+        <h4>Want to signup ? Fill out the form</h4>
+        <hr>
+
+        <form action="/signup" class="signup-form-box" method="POST">
+            <div><span>First Name</span> <span class="signuperror">hello</span></div>
+            <input type="text" name="firstName" class="input-box" placeholder="First Name*" required>
+
+            <div><span>Last Name</span> <span class="signuperror">hola</span></div>
+            <input type="text" name="lastName" class="input-box" placeholder="Last Name*" required>
+
+            <div class="gender-box">
+                <input type="radio" name="gender" class="g-radio" value="male" required>Male
+                <input type="radio" name="gender" class="g-radio" value="female" required>Female
+                <span class="signuperror">hola</span>
+            </div>
+
+            <div><span>Email</span> <span class="signuperror">hello</span></div>
+            <input type="email" name="email" class="input-box" placeholder="Email*" required>
+
+            <div><span>Password</span> <span class="signuperror">hello</span></div>
+            <input type="password" name="password" class="input-box" placeholder="Password*" required>
+
+            <div><span>Confirm Password</span> <span class="signuperror">hello</span></div>
+            <input type="password" name="confirmPassword" class="input-box" placeholder="Confirm Password*" required>
+
+            <button type="submit" class="btn-signup">Sign up</button>
+        </form>
+    </div>
+</body>
+
+</html>
